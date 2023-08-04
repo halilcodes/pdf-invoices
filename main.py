@@ -2,6 +2,7 @@ import pandas as pd
 from fpdf import FPDF
 import glob
 
+pdf = FPDF(orientation="L", unit="mm", format="A4")
 filepaths = glob.glob("invoices/*.xlsx")
 print(filepaths)
 
