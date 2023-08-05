@@ -56,9 +56,11 @@ for filepath in filepaths:
     pdf.cell(w=30, h=8, txt=str(grand_total), border=1, ln=1)
 
     # create some space
-    pdf.cell(w=30, h=30, txt=str(), ln=1)
+    pdf.cell(w=30, h=10, txt=str(), ln=1)
     # last two lines
     pdf.set_font(family="Times", style="B", size=24)
-    pdf.cell(w=0, h=10, txt=f"The total amount is {grand_total} Euros.", align="L", ln=1)
+    pdf.cell(w=0, h=40, txt=f"The total amount is {grand_total} Euros.", align="L", ln=1)
     pdf.cell(w=0, h=10, txt=f"Designed by Halil Can Hasmer.", align="L", ln=1)
+    pdf.cell(w=50, h=10, txt=f"PythonHow.", align="L")
+    pdf.image("pythonhow.png", w=10)
     pdf.output(f"PDFs/{absolute_path}.pdf")
